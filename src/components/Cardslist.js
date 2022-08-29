@@ -1,8 +1,8 @@
 import React from 'react'
 import Card from './Card'
-import { users } from '../data/users'
 
-export default function Cardslist() {
+
+export default function Cardslist({ users, remove }) {
 
     const list_style = {
         display: 'grid',
@@ -12,7 +12,7 @@ export default function Cardslist() {
     return (
         <div style={list_style}>
             {
-                users.map(user => <Card key={user.id} {...user} />)
+                users.map(user => <Card key={user.id} remove={remove} {...user} />)
             }
 
         </div>

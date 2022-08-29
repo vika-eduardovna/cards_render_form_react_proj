@@ -20,7 +20,7 @@ export const users = [
       "last_name": "Robinson",
       "avatar": "https://media.gq.com/photos/5a625821df8e105e64e8df4b/1:1/w_3052,h_3052,c_limit/Khalid_Shot_01-edit.jpg"
     },
-    /*{
+    {
       "id": 4,
       "email": "eve.holt@reqres.in",
       "first_name": "Eve",
@@ -40,5 +40,5 @@ export const users = [
       "first_name": "Tracey",
       "last_name": "Ramos",
       "avatar": "https://reqres.in/img/faces/6-image.jpg"
-    }*/
+    }
   ]

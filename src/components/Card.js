@@ -1,10 +1,9 @@
 import React from 'react'
-import { users } from '../data/users'
 
 
-export default function Card({ id, first_name, last_name, avatar }) {
+
+export default function Card({ id, first_name, last_name, avatar, remove }) {
     const card_style = {
-
         width: '212px',
         height: '70%',
         border: '1px solid black',
@@ -26,12 +25,12 @@ export default function Card({ id, first_name, last_name, avatar }) {
         marginBottom: '20px'
 
     }
-
+    const check_avatar = avatar ?? 'https://vyshnevyi-partners.com/wp-content/uploads/2016/12/no-avatar.png'
     return (
         <div style={card_style}>
-            <img src={avatar} alt="#" style={img_style} />
+            <img src={check_avatar} alt="ups.." style={img_style} />
             <p>{first_name} {last_name}</p>
-            <button style={btnStyle}>Remove</button>
+            <button onClick={() => remove(id)} style={btnStyle}>Remove</button>
         </div>
     )
 }
