@@ -1,8 +1,12 @@
 import React from 'react'
+import { useState } from 'react';
 
 
 
 export default function Card({ id, first_name, last_name, avatar, remove }) {
+
+    const [turnCard, setTurnCard] = useState(true);
+
     const card_style = {
         width: '212px',
         height: '70%',
@@ -11,6 +15,7 @@ export default function Card({ id, first_name, last_name, avatar, remove }) {
         padding: '25px',
         margin: '30px 20px'
     };
+
 
     const img_style = {
         width: '200px',
@@ -25,12 +30,15 @@ export default function Card({ id, first_name, last_name, avatar, remove }) {
         marginBottom: '20px'
 
     }
-    const check_avatar = avatar ?? 'https://vyshnevyi-partners.com/wp-content/uploads/2016/12/no-avatar.png'
+
     return (
-        <div style={card_style}>
-            <img src={check_avatar} alt="ups.." style={img_style} />
-            <p>{first_name} {last_name}</p>
-            <button onClick={() => remove(id)} style={btnStyle}>Remove</button>
+        <div style={card_style} onDoubleClick={() => setTurnCard(!turnCard)}>
+            <img src={turnCard ? avatar : 'https://vyshnevyi-partners.com/wp-content/uploads/2016/12/no-avatar.png'} alt="ups.." style={img_style} />
+            <div style={{ display: 'flex', gap: '8px' }}>
+                <p>{turnCard ? first_name : '******'}</p>
+                <p>{turnCard ? last_name : '******'}</p>
+            </div>
+            <button style={btnStyle} onClick={() => remove(id)}>Remove</button>
         </div>
     )
 }

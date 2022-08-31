@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Form({add}) {
+export default function Form({ add }) {
     const inputs_style = {
         display: 'flex',
         gap: '70px',
@@ -22,8 +22,6 @@ export default function Form({add}) {
         add(first_name.value, last_name.value);
         first_name.value = '';
         last_name.value = '';
-        
-
     }
     return (
         <div>

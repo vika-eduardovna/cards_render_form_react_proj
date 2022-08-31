@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 
 
-export default function Cardslist({ users, remove }) {
+export default function Cardslist({ users, remove, onDoubleClick }) {
 
     const list_style = {
         display: 'grid',
@@ -12,9 +12,8 @@ export default function Cardslist({ users, remove }) {
     return (
         <div style={list_style}>
             {
-                users.map(user => <Card key={user.id} remove={remove} {...user} />)
+                users.map(user => <Card key={user.id} remove={remove} onDoubleClick={onDoubleClick} {...user} />)
             }
-
         </div>
     )
 }

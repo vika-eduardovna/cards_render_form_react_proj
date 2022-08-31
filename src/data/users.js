@@ -34,11 +34,11 @@ export const users = [
       "last_name": "Morris",
       "avatar": "https://reqres.in/img/faces/5-image.jpg"
     },
-    {
+    /*{
       "id": 6,
       "email": "tracey.ramos@reqres.in",
       "first_name": "Tracey",
       "last_name": "Ramos",
       "avatar": "https://reqres.in/img/faces/6-image.jpg"
-    }
+    }*/
   ]

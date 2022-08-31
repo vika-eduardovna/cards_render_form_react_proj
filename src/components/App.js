@@ -1,13 +1,12 @@
 import Form from "./Form";
 import Cardslist from "./Cardslist";
 import { users } from '../data/users'
-import Card from "./Card";
 import { useState } from "react";
 
 function App() {
   const [newUsers, setNewUsers] = useState(users)
 
-  const addUser = (first_name, last_name, avatar) => setNewUsers([
+  const addUser = (first_name, last_name) => setNewUsers([
     ...newUsers,
     {
       id: Date.now(),
@@ -23,7 +22,6 @@ function App() {
     <div>
       <Form add={addUser} />
       <Cardslist users={newUsers} remove={removeUser} />
-
     </div>
   );
 }
