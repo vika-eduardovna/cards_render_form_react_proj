@@ -3,6 +3,7 @@ import Cardslist from "./Cardslist";
 import { users } from '../data/users'
 import { useState } from "react";
 
+
 function App() {
   const [newUsers, setNewUsers] = useState(users)
 
@@ -22,6 +23,7 @@ function App() {
     <div>
       <Form add={addUser} />
       <Cardslist users={newUsers} remove={removeUser} />
+      
     </div>
   );
 }
